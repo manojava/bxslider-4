@@ -1101,6 +1101,7 @@
      *  - DOM event object
      */
     var onTouchStart = function (e) {
+      console.log("onTouchStart event called");
       // watch only for left mouse, touch contact and pen contact
       // touchstart event object doesn`t have button property
       if (e.type !== 'touchstart' && e.button !== 0) {
@@ -1108,8 +1109,14 @@
       }
       var lastScrollTop = 0;
       $(window).scroll(function (event) {
+        console.log("Scroll started");
         var st = $(this).scrollTop();
-        if (st > lastScrollTop) { } else { e.preventDefault(); }
+        if (st > lastScrollTop) {
+          console.log("Scroll to top");
+        } else {
+          e.preventDefault();
+          console.log("No scroll");
+        }
       });
 
       //disable slider controls while user is interacting with slides to avoid slider freeze that happens on touch devices when a slide swipe happens immediately after interacting with slider controls
