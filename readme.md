@@ -1,3 +1,5 @@
+# bxSlider 4.2.15
+* Allow vertical scroll on bx slider
 # bxSlider 4.2.14
 ## The fully-loaded, responsive jQuery content slider
 
